@@ -20,7 +20,7 @@ El sistema integra:
 
 ------------------------------------------------------------------------
 
-# 🏗️1. Arquitectura del Sistema
+# 🏗️ 1. Arquitectura del Sistema
 
 ## Vista Arquitectónica General
 
@@ -56,7 +56,7 @@ El sistema integra:
 
 ------------------------------------------------------------------------
 
-# 2.⚙️ Diseño Técnico y Justificación
+# ⚙️ 2. Diseño Técnico y Justificación
 
 ## 2.1 Uso de Google Sheets como Base de Datos
 
@@ -186,3 +186,4 @@ Este script implementa:
 
 Convierte Google Sheets en un sistema transaccional simple y resiliente
 sin infraestructura adicional.
+
