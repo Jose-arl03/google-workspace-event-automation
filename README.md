@@ -164,19 +164,58 @@ function procesarNuevosRegistros() {
 
 # 4. Resultados de Pruebas
 
+## Evidencia Visual de Ejecución
+
 ![Resultados](Resultados.png)
 
-![Resultados](ss1.png)
+### 4.1 Evidencia de Notificación por Correo
 
-![Resultados](ss2.png)
+![Correo Enviado](ss1.png)
 
+La imagen anterior muestra el correo de confirmación recibido por el usuario final.  
+Se valida:
 
-  Componente         Estado
-  ------------------ --------
-  Trigger (onEdit)   PASSED
-  Calendar API       PASSED
-  Mail API           PASSED
-  Idempotencia       PASSED
+- Construcción dinámica del asunto.
+- Personalización con nombre del destinatario.
+- Confirmación del evento creado en Calendar.
+- Entrega exitosa mediante MailApp.
+
+---
+
+### 4.2 Evidencia de Registro en Apps Script
+
+![Log Apps Script](ss2.png)
+
+La captura del entorno de Apps Script confirma:
+
+- Ejecución del flujo completo.
+- Registro de procesamiento por fila.
+- Confirmación de envío de correo.
+- Ausencia de excepciones críticas.
+- Marcado correcto del estado transaccional.
+
+---
+
+## Resumen de Validación Funcional
+
+| Componente        | Resultado |
+|------------------|------------|
+| Trigger (onEdit) | PASSED     |
+| Calendar API     | PASSED     |
+| Mail API         | PASSED     |
+| Idempotencia     | PASSED     |
+
+---
+
+## Observaciones Técnicas
+
+- El evento se crea correctamente con duración de 1 hora.
+- El sistema mantiene consistencia incluso ante posibles fallos en el envío de correo.
+- La actualización de estado a `PROCESADO` evita reprocesamientos.
+- El Logger permite trazabilidad operativa.
+
+Las pruebas demuestran que el flujo transaccional se ejecuta de forma completa, consistente y resiliente dentro del ecosistema Google Workspace.
+
 
 ------------------------------------------------------------------------
 
@@ -191,5 +230,6 @@ Este script implementa:
 
 Convierte Google Sheets en un sistema transaccional simple y resiliente
 sin infraestructura adicional.
+
 
 
