@@ -166,6 +166,11 @@ function procesarNuevosRegistros() {
 
 ![Resultados](Resultados.png)
 
+![Resultados](ss1.png)
+
+![Resultados](ss2.png)
+
+
   Componente         Estado
   ------------------ --------
   Trigger (onEdit)   PASSED
@@ -186,4 +191,5 @@ Este script implementa:
 
 Convierte Google Sheets en un sistema transaccional simple y resiliente
 sin infraestructura adicional.
+
 
